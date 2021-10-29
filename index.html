@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>FinalProject</title>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-slider">
+            <!--slide-->
+            <div class="slides">
+                <div class="slide position-relative">
+                <img id='myslide' src="img/nz/nz2.JPG">
+                <p id="text" class="text position-absolute">New Zealand</p>
+                </div>
+<!--                 <div class="slide">
+                <img src="img/img1.jfif">
+                <p>TExt</p>
+                </div>
+                <div class="slide">
+                    <img src="img/img1.jfif">
+                    <p>TExt2</p>
+                    </div>
+
+                    <div class="slide">
+                        <img src="img/img1.jfif">
+                        <p>TExt3</p>
+                        </div>
+ -->        
+            </div>
+            <!--button-->
+<!--              <a class="pre" id="left" onclick="slideNext(-1)">&#10094;</a>
+            <a class="nex" id="right" onclick="slideNext(1)">&#10095;</a>
+ -->        </div>
+
+        <!--bottom circles -->
+<!--         <div class="button">
+            <span class="circles" onclick="currentSlide(1)"></span>
+            <span class="circles" onclick="currentSlide(2)"></span>
+            <span class="circles" onclick="currentSlide(3)"></span>
+            <span class="circles" onclick="currentSlide(4)"></span>
+            <span class="circles" onclick="currentSlide(5)"></span>-->
+
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+            <a class="navbar-brand text-light" href="#">TravelPhotoBlog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#blog">Blog<span class="sr-only"></span></a>
+                  </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn text-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Gallery
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="gallery/index.html">Australia</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+        
+                </li>
+                </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 bg-primary text-white" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+ </header>
+    <main>
+        <!--map-->
+        <div class="mr-auto ml-auto mt-5 map">
+        <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+        <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+        <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+        <div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+        <script type="text/javascript">
+        var map = AmCharts.makeChart("mapdiv",{
+        type: "map",
+        theme: "dark",
+        projection: "mercator",
+        panEventsEnabled : true,
+        backgroundColor : "#fff",
+        backgroundAlpha : 1,
+        zoomControl: {
+        zoomControlEnabled : true
+        },
+        dataProvider : {
+        map : "worldHigh",
+        getAreasFromMap : true,
+        areas :
+        [
+            {
+                "id": "CA",
+                "showAsSelected": true
+            },
+            {
+                "id": "US",
+                "showAsSelected": true
+            },
+            {
+                "id": "CO",
+                "showAsSelected": true
+            },
+            {
+                "id": "EC",
+                "showAsSelected": true
+            },
+            {
+                "id": "JP",
+                "showAsSelected": true
+            },
+            {
+                "id": "PH",
+                "showAsSelected": true
+            },
+            {
+                "id": "KR",
+                "showAsSelected": true
+            },
+            {
+                "id": "TW",
+                "showAsSelected": true
+            },
+            {
+                "id": "TH",
+                "showAsSelected": true
+            },
+            {
+                "id": "AU",
+                "showAsSelected": true
+            },
+            {
+                "id": "NZ",
+                "showAsSelected": true
+            }
+        ]
+        },
+        areasSettings : {
+        autoZoom : true,
+        color : "#B4B4B7",
+        colorSolid : "#fff",
+        selectedColor : "#EDD8B4",
+        outlineColor : "#666666",
+        rollOverColor : "#9EC2F7",
+        rollOverOutlineColor : "#000000"
+        }
+        });
+        </script>
+        
+
+</div>
+<div class="wrap">
+    <h1 id="blog" class="mt-5 text-center">Blog</h1>
+        <section class="log d-flex justify-content-around flex-wrap mt-5">
+        <!--section-->
+        <div class="mb-5 log-children">
+            <a href="blog/oceania.html">
+            <img src="img/aus/aus1.JPG">
+            <h2>Oceania</h2></a>
+        </div>
+        <!--section-->
+        <div class="mb-5 log-children">
+            <a href="blog/oceania.html">
+            <img src="img/img1.jfif">
+            <h2>Asia</h2></a>
+        </div>
+        <!--section-->
+        <div class="mb-5 log-children">
+            <a href="blog/oceania.html">
+            <img src="img/img1.jfif">
+            <h2>North America</h2></a>
+        </div>
+        <!--section-->
+        <div class="mb-5 log-children">
+            <a href="blog/oceania.html">
+            <img src="img/img1.jfif">
+            <h2>South America</h2></a>
+        </div>
+        </section>
+
+<!--             <button data-modal-target="#modal1" id="open" >Open</button>
+ -->            <div id="js-open" class="popup">
+                <div class="popup-content">
+                        <p class="font-weight-bold modal-header">Welcome to my page!</p>
+                        <button id="js-close" class="close" >&times;</button>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dolorum sapiente aliquam dicta ipsa nesciunt error amet cum ullam voluptate optio alias, ducimus similique in voluptatum debitis sequi hic eaque. Rem explicabo aperiam molestiae cum excepturi ipsum quod magnam amet voluptatem nam aut, consequuntur id dolores delectus voluptates assumenda vel doloribus facere tempore. Laboriosam reiciendis quam impedit mollitia dolorum laudantium eaque? Fuga dolorem assumenda perspiciatis eos sint pariatur. Quod, ex quia. Eveniet impedit laudantium nam quo ut rem reprehenderit et.</div>
+                </div>
+                <div id="overlay"></div>
+
+                </div>
+</div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

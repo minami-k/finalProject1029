@@ -1,0 +1,193 @@
+
+/*header slides*/
+.slides{
+    text-align: center;
+    height: 40vw;;
+}
+.slide img{
+    width: 100%;
+    height: 40vw;
+    object-position: center;
+    object-fit: cover;
+}
+.header-slider{
+    position: relative;
+}
+.text{
+    top: 5%;
+    left: 1%;
+    font-size: 25px;
+    text-shadow:1px 0 0 #000,0 1px 0 #000,-1px 0 0 #000,0 -1px 0 #000;
+    color:#fff;
+    position:relative;
+  }
+  .text::after, .text::before{
+    content:attr(data-text);
+    position:absolute;
+    left:-2px;
+    top:-2px;
+  }
+  .text::before{
+    left:-4px;
+    top:-4px;
+  }
+.pre, .nex{
+cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; 
+}
+.pre{
+    left: 5%;
+}
+.nex{
+    right: 5%;
+}
+.circles{
+    cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.circles.active{
+    background-color: red;
+}
+.button{
+    text-align: center;
+}
+
+/* .wrap{
+    background-image: url(../img/img1.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+ */
+.wrap h1{
+    font-size: 23px;
+}
+.log{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.log-children{
+    width: 45%;
+    background-color: #bbb;
+    border: 2px solid #000;
+    position: relative;
+    height: 300px;
+    transition: all 0.7s;
+}
+.log-children img{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    opacity: 0.7;
+}
+.log-children h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 25px;
+
+}
+.log-children a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+}
+.log-children:hover a{
+    color: #fff;
+    text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+}
+.log-children:hover{
+    transform: scale(1.2, 1.2);
+}
+.map{
+    width: max-content;
+}
+.modal-header{
+    font-size: 20px;
+}
+.popup{
+    position: fixed; 
+    z-index: 10;
+    transition: 200ms ease-in-out;
+    height: 100%; 
+    overflow: auto; 
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .popup-content{
+      z-index: 90;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%; 
+      background-color:#fff ;
+      padding: 20px;
+      border-radius: 10px;
+  
+  }
+ .popup.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #overlay{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.6);
+      transition: 200ms ease-in-out;
+     cursor: pointer;
+     z-index: 1;
+  }
